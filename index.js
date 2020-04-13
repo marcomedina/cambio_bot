@@ -12,7 +12,7 @@ const bot = new TelegramBot(token);
 axios.get('https://api.exchangeratesapi.io/latest?base=USD&symbols=MXN')
     .then(function (response) {
         const mxnValue = response.data.rates.MXN.toFixed(2);
-        const message = `El tipo de cambio de Dolar (USD) a Peso Mexicano (MXN) es:\n ${mxnValue}`;
+        const message = `El tipo de cambio de Dolar (🇺🇸) a Peso Mexicano (🇲🇽) es:\n ${mxnValue}`;
         console.log(message);
         bot.sendMessage(chatId, message);
     });
